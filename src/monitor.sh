@@ -87,22 +87,18 @@ function selectInterface(){
 		let counter++
 	done
 	checker=0; while [ $checker -ne 1 ]; do
-		echo -en "\n${LBlue}[${BPurple}?${LBlue}] ${BGray}Interfaz a usar (Ej: wlan0):${Color_Off} " && read input
-        for interface in $(cat iface); do
-			if [ "$input" == "$interface" ]; then
+		echo -en "\n${LBlue}[${BPurple}?${LBlue}] ${BGray}Opción de interfaz a usar:${Color_Off} " && read input
+        counter=1; for interface in $(cat iface); do
+			if [ "$input" == "$counter" ]; then
+                echo $interface > .interface.txt
 				checker=1
 			fi
+        let counter++
 		done; if [ $checker -eq 0 ]; then echo -e "\n${LBlue}[${BRed}✘${LBlue}] ${BRed}La interfaz proporcionada no existe${Color_Off}\n"; fi
     done
     rm iface 2>/dev/null
 
-    # iwconfig
-    # input=""
-    # while [ "$input" == "" ]; do
-    #     echo -en "${LBlue}[${BPurple}?${LBlue}] ${BGray}Interfaz a usar:${Color_Off} " && read input
-    # done
-    INTERFACE=$input
-    echo $INTERFACE > .interface.txt
+    INTERFACE=$(cat .interface.txt)
 }
 
 function modeMonitor(){
