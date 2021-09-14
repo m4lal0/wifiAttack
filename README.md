@@ -5,6 +5,7 @@
 [![Debian Supported](https://img.shields.io/badge/Debian-Supported-blue?style=flat-square&logo=debian)](#)
 [![Kali Supported](https://img.shields.io/badge/Kali-Supported-blue?style=flat-square&logo=linux)](#)
 [![Parrot Supported](https://img.shields.io/badge/Parrot-Supported-blue?style=flat-square&logo=linux)](#)
+[![Version](https://img.shields.io/badge/Version-1.0.1-blue?style=flat-square)](#)
 [![By](https://img.shields.io/badge/By-m4lal0-green?style=flat-square&logo=github)](#)
 
 <img src="https://i.ibb.co/tHRw85T/Top-wifi-Attack.png"
@@ -13,9 +14,7 @@
 	style="float: left; margin-right: 10px;" />
 </p>
 
-<p align="center">
 Herramienta ideal para automatizar ataques WiFi (WEP & WPA/WPA2 - PSK) destinados a la obtención de la contraseña.
-</p>
 
 La herramienta **wifiAttack** cuenta con varios modos de ataques. Divididos por el tipo de encriptación del AP objetivo:
 
@@ -63,19 +62,18 @@ La herramienta ejecutará la terminal Terminator con 4 divisiones.
 
 **Abajo a la derecha** : Obtención de la contraseña. Lanzamiento del cracking password de acuerdo al tipo de ataque seleccionado.
 
-<img src="https://i.ibb.co/LZ31j1L/Start-Wifi-Attack.png"
-	alt="wifiAttack-Start"
-	width="1000"
-	style="float: left; margin-right: 10px;" />
-</p>
-<br>
-<img src="https://i.ibb.co/S0gmPMC/Exec-Wifi-Attack.png"
-	alt="wifiAttack-Exec"
-	width="1000"
-	style="float: left; margin-right: 10px;" />
-</p>
-<br>
+![WifiAttack](https://i.ibb.co/LZ31j1L/Start-Wifi-Attack.png)
+
+![Exec](https://i.ibb.co/S0gmPMC/Exec-Wifi-Attack.png)
+
+## Actualizar la herramienta
+
+Para actualizar la herramienta es necesario utilizar el parámetro **--update** ó **-u**, con ello verificará si existe una nueva versión y si es asi nos preguntará si queremos actualizar.
+
+```bash
+./wifiAttack.sh --update
+```
 
 ## Descargo de responsabilidad
 
-Cualquier acción y / o actividad realizada mediante el uso de wifiAttack es de su exclusiva responsabilidad. El mal uso de wifiAttack puede resultar en cargos criminales contra las personas en cuestión. El autor no será responsable en caso de que se presenten cargos penales contra cualquier persona que haga un uso indebido de wifiAttack para infringir la ley.
+Cualquier acción y / o actividad realizada mediante el uso de wifiAttack es de su exclusiva responsabilidad. El mal uso de la herramienta wifiAttack puede resultar en cargos criminales contra las personas en cuestión. El autor no será responsable en caso de que se presenten cargos penales contra cualquier persona que haga un uso indebido de wifiAttack para infringir la ley.
